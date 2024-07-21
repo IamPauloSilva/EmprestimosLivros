@@ -4,11 +4,11 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-5">
         <h1>Empréstimos</h1>
-        <a asp-controller="Emprestimos" asp-action="Criar" class="btn btn-success mx-2">Criar Empréstimo</a>
+        <a asp-controller="Emprestimos" asp-action="Criar" class="btn btn-success mx-2"><i class="bi bi-file-earmark-plus mx-1"></i>Criar Empréstimo</a>
 
     </div>
 
-    <table class="table table-dark table-hover">
+    <table class="table table-light table-hover mt-5">
         <thead>
             <tr>
                 <th scope="col">Emprestador</th>
@@ -28,8 +28,8 @@
                         <td>@emprestimos.NomeLivro</td>
                         <td>@emprestimos.DataUltimaAtualizacao</td>
                         <td>
-                            <a asp-controller="Emprestimos" asp-action="Editar" asp-route-id="@emprestimos.Id" class="btn btn-warning mx-2">Editar</a>
-                            <a asp-controller="Emprestimos" asp-action="Excluir" asp-route-id="@emprestimos.Id" class="btn btn-danger mx-2">Excluir</a>
+                            <a asp-controller="Emprestimos" asp-action="Editar" asp-route-id="@emprestimos.Id" class="btn btn-warning mx-2"><i class="bi bi-pencil-square mx-1"></i>Editar</a>
+                            <a asp-controller="Emprestimos" asp-action="Excluir" asp-route-id="@emprestimos.Id" class="btn btn-danger mx-2"><i class="bi bi-trash3-fill mx-1"></i>Excluir</a>
                         </td>
                     </tr>
 

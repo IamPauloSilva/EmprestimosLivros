@@ -4,25 +4,25 @@
 }
 
 <div class="container bg-dark rounded-5">
-    <div class="mb-5 text-center">
+    <div class="mb-5 text-center text-light">
         <h1>Edição de Empréstimos</h1>
     </div>
 
     <form method="post" asp-controller="Emprestimos" asp-action="Editar">
         <input type="hidden" asp-for=Id />
         <div class="mb-3">
-            <label for="Emprestador" class="form-label text-light">Emprestador</label>
-            <input type="text" class="form-control" asp-for="Emprestador" id="Emprestador" placeholder="Quem empresta o livro?">
+            <label for="Emprestador" class="form-label text-light">Fornecedor:</label>
+            <input type="text" class="form-control text-light" asp-for="Emprestador" id="Emprestador" placeholder="Quem empresta o livro?">
             <span class="text-danger" asp-validation-for="Emprestador"></span>
         </div>
         <div class="mb-3">
-            <label for="Recebedor" class="form-label text-light">Recebedor</label>
-            <input type="text" class="form-control" asp-for="Recebedor" id="Recebedor" placeholder="A quem será emprestado o livro?">
+            <label for="Recebedor" class="form-label text-light">Recebedor:</label>
+            <input type="text" class="form-control text-light" asp-for="Recebedor" id="Recebedor" placeholder="A quem será emprestado o livro?">
             <span class="text-danger" asp-validation-for="Recebedor"></span>
         </div>
         <div class="mb-3">
-            <label for="NomeLivro" class="form-label text-light">Nome do livro</label>
-            <input type="text" class="form-control" asp-for="NomeLivro" id="NomeLivro" placeholder="Nome do livro a ser emprestado?">
+            <label for="NomeLivro" class="form-label text-light">Nome do livro:</label>
+            <input type="text" class="form-control text-light" asp-for="NomeLivro" id="NomeLivro" placeholder="Nome do livro a ser emprestado?">
             <span class="text-danger" asp-validation-for="NomeLivro"></span>
         </div>
 
