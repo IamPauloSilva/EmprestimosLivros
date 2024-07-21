@@ -1,34 +1,36 @@
 ﻿@model EmprestimosModel
 @{
-    ViewData["Title"] = "Criar Empréstimo";
+    ViewData["Title"] = "Excluir Empréstimo";
 }
 
-<div class="container bg-dark rounded-5" >
+<div class="container bg-dark rounded-5">
     <div class="mb-5 text-center">
-        <h1>Criação de Empréstimos</h1>
+        <h1>Excluir Empréstimos</h1>
+        <h2>Tem certeza que deseja excluir o registo seguinte?</h2>
     </div>
 
-    <form method="post" asp-controller="Emprestimos" asp-action="Criar"> 
+    <form method="post" asp-controller="Emprestimos" asp-action="Excluir">
+        <input type="hidden" asp-for=Id />
         <div class="mb-3">
             <label for="Emprestador" class="form-label text-light">Emprestador</label>
-            <input type="text" class="form-control" asp-for="Emprestador" id="Emprestador" placeholder="Quem empresta o livro?">
+            <input type="text" class="form-control" asp-for="Emprestador" id="Emprestador" placeholder="Quem empresta o livro?" disabled>
             <span class="text-danger" asp-validation-for="Emprestador"></span>
         </div>
         <div class="mb-3">
             <label for="Recebedor" class="form-label text-light">Recebedor</label>
-            <input type="text" class="form-control" asp-for="Recebedor" id="Recebedor" placeholder="A quem será emprestado o livro?">
+            <input type="text" class="form-control" asp-for="Recebedor" id="Recebedor" placeholder="A quem será emprestado o livro?" disabled>
             <span class="text-danger" asp-validation-for="Recebedor"></span>
         </div>
         <div class="mb-3">
             <label for="NomeLivro" class="form-label text-light">Nome do livro</label>
-            <input type="text" class="form-control" asp-for="NomeLivro" id="NomeLivro" placeholder="Nome do livro a ser emprestado?">
+            <input type="text" class="form-control" asp-for="NomeLivro" id="NomeLivro" placeholder="Nome do livro a ser emprestado?" disabled>
             <span class="text-danger" asp-validation-for="NomeLivro"></span>
         </div>
 
         <div class="d-flex gap-5 mt-5">
-            <button type="submit" class="btn btn-success w-50">Adicionar</button>
+            <button type="submit" class="btn btn-danger w-50">Excluir</button>
             <a class="btn btn-primary w-50" asp-asp-controller="Emprestimos" asp-action="Index">Voltar</a>
         </div>
-        
+
     </form>
 </div>
