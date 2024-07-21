@@ -7,8 +7,7 @@
 
         public string Recebedor { get; set; }
         public string NomeLivro { get; set; }
-        public DateTime DataEmprestimo { get; set; } = DateTime.Now;
-
+        public DateTime DataUltimaAtualizacao { get; set; } = DateTime.Now;
 
     }
 
