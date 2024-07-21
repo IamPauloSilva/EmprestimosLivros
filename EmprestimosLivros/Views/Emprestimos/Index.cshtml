@@ -1,1 +1,36 @@
-﻿<h1>Ola mundo</h1>
+﻿@model IEnumerable<EmprestimosModel>
+
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Emprestador</th>
+            <th scope="col">Recebedor</th>
+            <th scope="col">Nome do Livro</th>
+            <th scope="col">Data Atualização</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            foreach (var emprestimos in Model)
+            {
+                <tr>
+                    <th scope="row">@emprestimos.Emprestador</th>
+                    <td>@emprestimos.Recebedor</td>
+                    <td>@emprestimos.NomeLivro</td>
+                    <td>@emprestimos.DataUltimaAtualizacao</td>
+                </tr>
+
+            }
+        }
+
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        
+    </tbody>
+</table>
