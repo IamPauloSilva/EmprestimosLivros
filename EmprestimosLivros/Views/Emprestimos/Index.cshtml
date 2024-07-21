@@ -1,36 +1,34 @@
 ﻿@model IEnumerable<EmprestimosModel>
 
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h1 class="text-light">Empréstimos</h1>
+        <a class="btn btn-success mx-5" asp-controller="Emprestimos" asp-action="Criar">Adicionar Novo Empréstimo</a>
+    </div>
 
-<table class="table table-dark table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Emprestador</th>
-            <th scope="col">Recebedor</th>
-            <th scope="col">Nome do Livro</th>
-            <th scope="col">Data Atualização</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model != null)
-        {
-            foreach (var emprestimos in Model)
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Emprestador</th>
+                <th scope="col">Recebedor</th>
+                <th scope="col">Nome do Livro</th>
+                <th scope="col">Data Atualização</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
             {
-                <tr>
-                    <th scope="row">@emprestimos.Emprestador</th>
-                    <td>@emprestimos.Recebedor</td>
-                    <td>@emprestimos.NomeLivro</td>
-                    <td>@emprestimos.DataUltimaAtualizacao</td>
-                </tr>
+                foreach (var emprestimos in Model)
+                {
+                    <tr>
+                        <th scope="row">@emprestimos.Emprestador</th>
+                        <td>@emprestimos.Recebedor</td>
+                        <td>@emprestimos.NomeLivro</td>
+                        <td>@emprestimos.DataUltimaAtualizacao</td>
+                    </tr>
 
+                }
             }
-        }
-
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
