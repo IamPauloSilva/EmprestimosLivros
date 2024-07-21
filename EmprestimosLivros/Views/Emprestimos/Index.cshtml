@@ -7,8 +7,20 @@
         <a asp-controller="Emprestimos" asp-action="Criar" class="btn btn-success mx-2"><i class="bi bi-file-earmark-plus mx-1"></i>Criar Empréstimo</a>
 
     </div>
+    @if(TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success text-light" role="alert"> 
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger text-light" role="alert">
+            @TempData["MensagemErro"]
+        </div>
+    }
 
-    <table class="table table-light table-hover mt-5">
+    <table id="TabelaEmprestimos" class="table table-light table-hover mt-5">
         <thead>
             <tr>
                 <th scope="col">Emprestador</th>
